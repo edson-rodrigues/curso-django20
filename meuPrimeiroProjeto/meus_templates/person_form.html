@@ -8,9 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{% url 'person_new' %}" method="POST">
-
-    <button type="submit"></button>
+    <form action="{% url 'persons_new' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+    <button type="submit">Salvar</button>
     </form>
 </body>
 </html>
